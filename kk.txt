@@ -1,0 +1,22 @@
+Header/Navigation, 
+Hero Section (intro, call-to-action), 
+About Me, 
+Skills, 
+Projects, 
+Education, 
+Certificates, 
+Internships, 
+Leadership
+Activities
+Awards
+Achievements
+Contact Form, 
+and Footer.
+
+
+
+css - bg-indigo-200
+js - bg-slate-500
+react - bg-slate-700
+node - bg-slate-800
+git - bg-blue-200

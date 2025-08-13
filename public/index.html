@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-[#060633] text-white font-sans">
+    <!-- Header / Navigation -->
+    <header class="w-full bg-[#060633] text-white">
+      <div
+        class="flex items-center justify-between max-w-7xl mx-auto px-6 py-5"
+      >
+        <!-- Logo -->
+        <a href="#home">
+          <img src="assets/logo@2x.png" alt="Logo" id="logo" />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex space-x-8 text-base font-semibold">
+          <a href="#about" class="relative group">
+            About Me
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+          <a href="#skills" class="relative group">
+            Skills
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+          <a href="#projects" class="relative group">
+            Projects
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+          <a href="#internship" class="relative group">
+            Internship
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+          <a href="#educationAndCertifications" class="relative group">
+            Education & Certifications
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+
+          <a href="#awardsAndAchievements" class="relative group">
+            Awards & Achievements
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+        </nav>
+
+        <!-- Contact Button -->
+        <a
+          href="#contact"
+          class="hidden lg:inline-block bg-white text-black font-bold px-6 py-3 rounded-xl shadow-md hover:bg-gray-200 transition"
+        >
+          Contact Me
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menu-btn"
+          class="lg:hidden flex flex-col space-y-1 focus:outline-none"
+        >
+          <span class="block w-6 h-0.5 bg-white"></span>
+          <span class="block w-6 h-0.5 bg-white"></span>
+          <span class="block w-6 h-0.5 bg-white"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav
+        id="mobile-menu"
+        class="hidden lg:hidden flex flex-col space-y-4 px-6 pb-4 bg-[#060633] text-base font-semibold"
+      >
+        <a href="#about" class="hover:text-blue-400">About Me</a>
+        <a href="#skills" class="hover:text-blue-400">Skills</a>
+        <a href="#projects" class="hover:text-blue-400">Projects</a>
+        <a href="#internship" class="hover:text-blue-400">Internship</a>
+        <a href="#educationAndCertifications" class="hover:text-blue-400"
+          >Education & Certifications</a
+        >
+
+        <a href="#awardsAndAchievements" class="hover:text-blue-400"
+          >Awards & Achievements</a
+        >
+        <a
+          href="#contact"
+          class="bg-white text-black font-bold px-6 py-3 rounded-xl shadow-md hover:bg-gray-200 transition text-center"
+        >
+          Contact Me
+        </a>
+      </nav>
+
+      <script src="js/menu.js"></script>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative flex flex-col items-center justify-between px-4 py-8 sm:px-10 md:px-20 xl:flex-row gap-y-12 sm:gap-y-24 overflow-hidden"
+    >
+      <!-- Left Content -->
+      <div
+        class="max-w-xl space-y-4 sm:space-y-6 z-10 text-center xl:text-left"
+      >
+        <p class="text-gray-300 text-base sm:text-lg">
+          Explore my portfolio and let's bring ideas to life.
+        </p>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">
+          Hey, I'm <span class="text-white">Kunal Kavathekar</span>
+        </h1>
+        <p class="text-gray-300 text-sm sm:text-lg leading-relaxed">
+          I thrive on tackling diverse challenges and bringing innovative
+          solutions to life. With a strong foundation in computer science, I
+          excel in areas from Robotic Process Automation and UI/UX design to
+          Android app development and cybersecurity.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row gap-5 sm:gap-10 items-center justify-center xl:justify-start"
+        >
+          <button
+            id="downloadCvBtn"
+            class="px-6 py-3 sm:px-8 sm:py-4 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white font-bold text-sm sm:text-lg hover:from-pink-600 hover:to-orange-500 transition"
+          >
+            Download My CV
+          </button>
+
+          <!-- Social Icons -->
+          <div class="flex gap-5 sm:gap-10">
+            <!-- Instagram Link -->
+            <a
+              href="https://www.instagram.com/kunalsk36/"
+              target="_blank"
+              class="group relative bg-white w-[50px] h-[50px] border-[3px] border-[#d72888] rounded-full cursor-pointer overflow-hidden transition-all duration-500 flex items-center justify-center hover:bg-[#d72888]"
+            >
+              <img
+                src="logo-images/instagram-white-logo.png"
+                alt="Instagram White Logo"
+                class="absolute w-[30px] h-[30px] transition-all duration-500 opacity-0 left-[-50%] top-1/2 -translate-y-1/2 -translate-x-1/2 group-hover:left-1/2 group-hover:opacity-100"
+              />
+              <img
+                src="logo-images/instagram-color-logo.png"
+                alt="Instagram Color Logo"
+                class="absolute w-[30px] h-[30px] transition-all duration-500 opacity-100 left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 group-hover:left-[150%] group-hover:opacity-0"
+              />
+            </a>
+
+            <!-- LinkedIn Link -->
+            <a
+              href="https://www.linkedin.com/in/kunal-kavathekar-7088b1309"
+              target="_blank"
+              class="group relative bg-white w-[50px] h-[50px] border-[3px] border-[#0077B5] rounded-full cursor-pointer overflow-hidden transition-all duration-500 flex items-center justify-center hover:bg-[#0077B5]"
+            >
+              <img
+                src="logo-images/linkedin-white-logo.png"
+                onerror="this.src='logo-images/linkedin-white-logo.png'"
+                alt="LinkedIn White Logo"
+                class="absolute w-[30px] h-[30px] transition-all duration-500 opacity-0 left-[-50%] top-1/2 -translate-y-1/2 -translate-x-1/2 group-hover:left-1/2 group-hover:opacity-100"
+              />
+              <img
+                src="logo-images/linkedin-color-logo.png"
+                onerror="this.src='logo-images/linkedin-color-logo.png'"
+                alt="LinkedIn Color Logo"
+                class="absolute w-[30px] h-[30px] transition-all duration-500 opacity-100 left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 group-hover:left-[150%] group-hover:opacity-0"
+              />
+            </a>
+
+            <!-- GitHub Link -->
+            <a
+              href="https://github.com/KunalSK36"
+              target="_blank"
+              class="group relative bg-white w-[50px] h-[50px] border-[3px] border-[#333] rounded-full cursor-pointer overflow-hidden transition-all duration-500 flex items-center justify-center hover:bg-[#333]"
+            >
+              <img
+                src="logo-images/github-white-logo.png"
+                onerror="this.src='logo-images/github-white-logo.png'"
+                alt="GitHub White Logo"
+                class="absolute w-[30px] h-[30px] transition-all duration-500 opacity-0 left-[-50%] top-1/2 -translate-y-1/2 -translate-x-1/2 group-hover:left-1/2 group-hover:opacity-100"
+              />
+              <img
+                src="logo-images/github-color-logo.png"
+                onerror="this.src='logo-images/github-color-logo.png'"
+                alt="GitHub Color Logo"
+                class="absolute w-[30px] h-[30px] transition-all duration-500 opacity-100 left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 group-hover:left-[150%] group-hover:opacity-0"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative hidden sm:block mt-10 md:mt-0">
+        <!-- Gradient Shape -->
+        <div
+          class="absolute -top-10 sm:-right-10 sm:w-[400px] h-[400px] bg-gradient-to-br from-orange-400 to-pink-500 rounded-[100px] sm:rotate-[15deg] z-0 right-[-24px] w-[300px] rotate-0"
+        ></div>
+
+        <!-- Profile Image -->
+        <div class="relative z-10 border-4 border-white rounded-full p-2">
+          <img
+            src="assets/kkpic1@2x.png"
+            alt="Kunal"
+            class="w-72 h-72 object-cover rounded-full"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section
+      id="about"
+      class="relative flex flex-col items-center justify-between px-4 py-16 sm:px-10 md:px-20 xl:flex-row gap-y-12 sm:gap-y-24 overflow-hidden gap-10"
+    >
+      <div>
+        <img src="assets/kkpic2@2x.png" alt="profile photo" class="w-96" />
+      </div>
+      <div class="flex flex-col items-center md:items-start gap-5 w-full">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          About <span class="text-[#fca76e]">Me</span>
+        </h2>
+        <p class="text-lg text-white leading-relaxed mb-8">
+          I'm a tech enthusiast skilled in Robotic Process Automation, UI/UX
+          design, Android development, and web development. Driven by the
+          evolution of technology, I create user-centric solutions that solve
+          complex problems and enhance productivity. Let's connect and explore
+          innovative possibilities together.
+        </p>
+        <button
+          class="px-6 py-3 sm:px-8 sm:py-4 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white font-bold text-sm sm:text-lg hover:from-pink-600 hover:to-orange-500 transition"
+        >
+          Read More
+        </button>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 md:px-20">
+      <!-- Heading -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-white">
+          My <span class="text-[#fca76e]">Skills</span>
+        </h2>
+        <p class="text-lg text-gray-300 leading-relaxed mt-6 max-w-2xl mx-auto">
+          A collection of tools and technologies I use in development.
+        </p>
+      </div>
+
+      <!-- Skills Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+        <!-- Skill Card -->
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img src="assets/html-logo.png" alt="HTML" class="w-16 h-16 mb-4" />
+          <span class="text-white font-medium">HTML</span>
+        </div>
+
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img src="assets/css-logo.png" alt="CSS" class="w-16 h-16 mb-4" />
+          <span class="text-white font-medium">CSS</span>
+        </div>
+
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img
+            src="assets/javascript-logo.png"
+            alt="JavaScript"
+            class="w-16 h-16 mb-4"
+          />
+          <span class="text-white font-medium">JavaScript</span>
+        </div>
+
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img
+            src="assets/react-logo.png"
+            alt="React JS"
+            class="w-16 h-16 mb-4"
+          />
+          <span class="text-white font-medium">React JS</span>
+        </div>
+
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img src="assets/git-logo.png" alt="GitHub" class="w-16 h-16 mb-4" />
+          <span class="text-white font-medium">Git</span>
+        </div>
+
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img
+            src="assets/Node-js-logo.png"
+            alt="Node.js"
+            class="w-16 h-16 mb-4"
+          />
+          <span class="text-white font-medium">Node.js</span>
+        </div>
+
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img
+            src="assets/tailwind-css-logo.png"
+            alt="Firebase"
+            class="w-16 h-16 mb-4"
+          />
+          <span class="text-white font-medium">Tailwind CSS</span>
+        </div>
+
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img
+            src="assets/MongoDBSquareLogo.png"
+            alt="MongoDB"
+            class="w-16 h-16 mb-4"
+          />
+          <span class="text-white font-medium">MongoDB</span>
+        </div>
+
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img src="assets/java-logo.png" alt="Java" class="w-16 h-16 mb-4" />
+          <span class="text-white font-medium">Java</span>
+        </div>
+
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img src="assets/python-logo.png" alt="Java" class="w-16 h-16 mb-4" />
+          <span class="text-white font-medium">Python</span>
+        </div>
+
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img src="assets/kotlin-logo.png" alt="Java" class="w-16 h-16 mb-4" />
+          <span class="text-white font-medium">Kotlin</span>
+        </div>
+
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img src="assets/csharp-logo.png" alt="Java" class="w-16 h-16 mb-4" />
+          <span class="text-white font-medium">C#</span>
+        </div>
+
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img src="assets/cpp-logo.png" alt="Java" class="w-16 h-16 mb-4" />
+          <span class="text-white font-medium">C++</span>
+        </div>
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img src="assets/rpa-logo.png" alt="Java" class="w-16 h-16 mb-4" />
+          <span class="text-white font-medium">RPA</span>
+        </div>
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img src="assets/uiux-logo.png" alt="Java" class="w-16 h-16 mb-4" />
+          <span class="text-white font-medium">UIUX</span>
+        </div>
+        <div
+          class="bg-slate-500 rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition transform"
+        >
+          <img src="assets/oracle-logo.png" alt="Java" class="w-16 h-16 mb-4" />
+          <span class="text-white font-medium">Oracle</span>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="js/resumeDownload.js"></script>
+</html>

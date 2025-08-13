@@ -1,0 +1,65 @@
+#logo {
+  height: 55px;
+  width: 55px;
+  position: relative;
+  border-radius: 50%;
+  object-fit: cover;
+  min-height: 55px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#logo:hover{
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+.li-logo {
+  position: relative;
+  background: rgb(255, 255, 255);
+  width: 50px; 
+  height: 50px;
+  border: 3px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .5s;
+  overflow: hidden;
+}
+.li-logo img {
+  width: 30px; 
+  height: 30px;
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: .5s;
+}
+.li-logo:nth-child(1) {
+  border-color: #d72888;
+}
+.li-logo:nth-child(2) {
+  border-color: #0077B5;
+  left: 50px;
+}
+.li-logo:nth-child(3) {
+  border-color: #333;
+}
+.li-logo:hover:nth-child(1) {
+  background: #d72888;
+}
+.li-logo:hover:nth-child(2) {
+  background: #0077B5;
+}
+.li-logo:hover:nth-child(3) {
+  background: #333;
+}
+.li-logo img:nth-child(1) {
+  left: -50%;
+  opacity: 0;
+}
+.li-logo:hover img:nth-child(1) {
+  left: 50%;
+  opacity: 1;
+}
+.li-logo:hover img:nth-child(2) {
+  left: 150%;
+  opacity: 0;
+}
