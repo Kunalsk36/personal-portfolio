@@ -1,17 +1,17 @@
-Header/Navigation, 
-Hero Section (intro, call-to-action), 
-About Me, 
-Skills, 
-Projects, 
-Education, 
-Certificates, 
-Internships, 
-Leadership
-Activities
-Awards
-Achievements
-Contact Form, 
-and Footer.
+Header/Navigation, {}
+Hero Section (intro, call-to-action), {}
+About Me, {}
+Skills, {}
+Projects, {} 
+Education, {}
+Certificates, {} 
+Internships, {}
+Leadership {}
+Activities {}
+Awards {}
+Achievements {}
+Contact Form, {}
+and Footer. {}
 
 
 

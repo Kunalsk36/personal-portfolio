@@ -8,35 +8,35 @@
   transition: box-shadow 0.3s ease-in-out;
 }
 
-#logo:hover{
+#logo:hover {
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
 }
 
 .li-logo {
   position: relative;
   background: rgb(255, 255, 255);
-  width: 50px; 
+  width: 50px;
   height: 50px;
   border: 3px solid;
   border-radius: 50%;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
   overflow: hidden;
 }
 .li-logo img {
-  width: 30px; 
+  width: 30px;
   height: 30px;
   position: absolute;
   top: 51%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: .5s;
+  transition: 0.5s;
 }
 .li-logo:nth-child(1) {
   border-color: #d72888;
 }
 .li-logo:nth-child(2) {
-  border-color: #0077B5;
+  border-color: #0077b5;
   left: 50px;
 }
 .li-logo:nth-child(3) {
@@ -46,7 +46,7 @@
   background: #d72888;
 }
 .li-logo:hover:nth-child(2) {
-  background: #0077B5;
+  background: #0077b5;
 }
 .li-logo:hover:nth-child(3) {
   background: #333;
@@ -62,4 +62,586 @@
 .li-logo:hover img:nth-child(2) {
   left: 150%;
   opacity: 0;
+}
+
+/* ---------- Theme (reuses your earlier colors if present) ---------- */
+:root {
+  --bg-deep: #080e2a;
+  --text: #eaf1ff;
+  --muted: #a6b0d4;
+  --accent: #f6a66a;
+  --card-grad: linear-gradient(240deg, #fd8d8b, #ffae79 75%, #fc6c9c);
+  --ink: #121a3b;
+  --radius-2xl: 24px;
+  --radius-xl: 18px;
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.35);
+  --gap-lg: clamp(20px, 4vw, 40px);
+  --gap-md: clamp(14px, 2.4vw, 24px);
+  --gap-sm: 10px;
+}
+
+/* ---------- Section shells ---------- */
+/* ---------- Education list ---------- */
+.centerDiv {
+  display: flex;
+  justify-content: center;
+}
+.edu-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.edu-item {
+  display: flex; /* changed from grid to flex for easier vertical centering */
+  align-items: center; /* vertically center icon and body */
+  gap: clamp(14px, 2.2vw, 22px);
+  padding: clamp(18px, 2.2vw, 26px);
+  background: transparent; /* remove background effect */
+  border-radius: var(--radius-xl);
+  position: relative;
+}
+
+/* Removed glowing background */
+.edu-item::before {
+  content: none;
+}
+
+.edu-icon {
+  width: clamp(54px, 6vw, 74px);
+  height: clamp(54px, 6vw, 74px);
+  border-radius: 14px;
+  object-fit: contain;
+  background: #0e153a;
+  padding: 8px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.edu-body {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Certificate carousel ---------- */
+.certs-frame {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--gap-md);
+  background: #0a1337;
+  border-radius: var(--radius-2xl);
+  padding: clamp(14px, 2vw, 18px);
+  box-shadow: var(--shadow-lg);
+}
+
+.certs-nav {
+  border: 0;
+  background: transparent;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.certs-nav:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.certs-nav:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.06);
+}
+.certs-nav img {
+  width: 28px;
+  height: 48px;
+  display: block;
+}
+
+.certs-viewport {
+  overflow: hidden;
+  position: relative;
+  border-radius: calc(var(--radius-2xl) - 6px);
+}
+
+.certs-track {
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--gap-md);
+  padding: 6px;
+}
+
+.cert-card {
+  aspect-ratio: 4 / 3;
+  width: clamp(220px, 30vw, 330px);
+  border-radius: 16px;
+  background: var(--card-grad);
+  padding: 8px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+.cert-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #0c1540;
+}
+
+.certs-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+.certs-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.25);
+}
+.certs-dots button[aria-current="true"] {
+  background: #fff;
+}
+
+/* ---------- Small screens tweaks ---------- */
+@media (max-width: 620px) {
+  .edu-item {
+    grid-template-columns: 56px 1fr;
+  }
+  .cert-card {
+    width: 47vw;
+  }
+}
+
+@media (max-width: 620px) {
+  .cert-card {
+    width: 40vw;
+  }
+}
+
+
+/* ---------- Internship Section ---------- */
+.internship-section {
+  color: var(--text);
+}
+
+.internship-inner {
+  padding: clamp(40px, 5vw, 70px) 0;
+}
+
+.internship-card {
+  background: var(--ink);
+  border-radius: var(--radius-xl);
+  padding: clamp(18px, 2.5vw, 28px);
+  box-shadow: var(--shadow-lg);
+  max-width: 700px;
+  margin-inline: auto;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.internship-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.45);
+}
+
+.internship-header {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+  margin-bottom: var(--gap-md);
+}
+
+.internship-icon {
+  width: clamp(54px,6vw,74px);
+  height: clamp(54px,6vw,74px);
+  border-radius: 14px;
+  object-fit: contain;
+  background: #0e153a;
+  padding: 8px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+}
+
+.internship-role {
+  margin: 0;
+  font-size: clamp(20px,2.6vw,26px);
+  font-weight: 700;
+}
+
+.internship-duration {
+  color: var(--muted);
+  font-size: clamp(14px,2vw,16px);
+  margin: 4px 0 0;
+}
+
+.internship-organization {
+  font-size: clamp(14px,2vw,16px);
+  margin-bottom: var(--gap-sm);
+}
+
+.internship-responsibilities {
+  list-style: disc;
+  padding-left: 20px;
+  color: var(--muted);
+  font-size: clamp(14px,2vw,16px);
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .internship-card {
+    padding: 18px;
+  }
+}
+
+
+/* ---------- Leadership Section ---------- */
+.leadership-section {
+  color: var(--text);
+}
+
+.leadership-inner {
+  padding: clamp(40px, 5vw, 70px) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leadership-title {
+  font-size: clamp(28px, 5vw, 48px);
+  margin: 0 0 clamp(28px,4vw,48px);
+  letter-spacing: .4px;
+  text-align: center;
+}
+.leadership-title-my { color: #fff; font-weight: 700; }
+.leadership-title-rest { color: var(--accent); font-weight: 700; }
+
+.leadership-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  width: 100%;
+  max-width: 720px; /* keeps card centered like Internship */
+}
+
+.leadership-item {
+  background: var(--ink);
+  border-radius: var(--radius-xl);
+  padding: clamp(18px, 2.5vw, 28px);
+  box-shadow: var(--shadow-lg);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.leadership-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.45);
+}
+
+.leadership-role {
+  font-size: clamp(18px,2.5vw,24px);
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.leadership-duration {
+  font-size: clamp(14px,2vw,16px);
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+
+.leadership-organization {
+  font-size: clamp(14px,2vw,16px);
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+.leadership-description {
+  font-size: clamp(14px,2vw,16px);
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.leadership-description ul{
+  list-style: disc;
+  padding-left: 20px;
+}
+
+
+/* ---------- Awards Section ---------- */
+.awards-section {
+  color: var(--text);
+}
+
+.awards-inner {
+  padding: clamp(40px, 5vw, 70px) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.awards-title {
+  font-size: clamp(28px, 5vw, 48px);
+  margin: 0 0 clamp(28px,4vw,48px);
+  letter-spacing: .4px;
+  text-align: center;
+}
+.awards-title-my { color: #fff; font-weight: 700; }
+.awards-title-rest { color: var(--accent); font-weight: 700; }
+
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  width: 100%;
+  max-width: 720px; /* center cards */
+}
+
+.award-item {
+  background: var(--ink);
+  border-radius: var(--radius-xl);
+  padding: clamp(18px, 2.5vw, 28px);
+  box-shadow: var(--shadow-lg);
+  transition: transform .25s ease, box-shadow .25s ease;
+  text-align: center;
+}
+
+.award-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.45);
+}
+
+.award-rank {
+  font-size: clamp(18px,2.5vw,22px);
+  margin: 0 0 6px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.award-event {
+  font-size: clamp(14px,2vw,16px);
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* --- Main Wrapper --- */
+
+.contact-container {
+  width: 100%;
+}
+
+/* --- Main Content Body (The Single Card) --- */
+/* --- Main Content Body (The Single Card) --- */
+.contact-body {
+  display: flex;
+  background-color: #FFE8D6; /* Peach background for the whole card */
+  border-top-right-radius: 110px;
+  border-bottom-left-radius: 110px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  overflow: hidden; /* CRITICAL: This clips children to the parent's border-radius */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+
+  /* --- NEW STYLES ADDED BELOW --- */
+  width: 80%;                 /* Takes 90% of the screen width for fluidity */
+  max-width: 1100px;          /* But will not exceed 1100px on large screens */
+  margin-left: auto;          /* These two lines center the container */
+  margin-right: auto;
+}
+
+/* --- Left Side Section (Pink Gradient) --- */
+.contact-left {
+  flex: 0 0 35%;
+  background: linear-gradient(180deg, #FF7B9B, #F48582);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  color: #101128;
+  /* No border-radius here; it's handled by the parent */
+}
+
+.contact-email {
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.map-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  margin: 1rem 0;
+}
+
+/* --- Add this new rule to your CSS file --- */
+.map-placeholder iframe {
+  width: 100%;       /* Makes the map fill the container's width */
+  height: 100%;      /* Makes the map fill the container's height */
+  border: 2px solid black;      /* Removes the default iframe border */
+  border-radius: 15px; /* Matches the container's rounded corners */
+}
+
+.contact-location {
+  font-weight: 600;
+}
+
+/* --- Right Side Form Section --- */
+.contact-form {
+  flex: 1;
+  /* REMOVED background-color; it now inherits the peach from .contact-body */
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row input {
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: none;
+  background-color: #F9F3EE;
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #888;
+}
+
+.contact-form textarea {
+  height: 160px;
+  resize: none;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #101128;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: auto; /* Pushes button to the bottom if there's space */
+}
+
+.btn-submit:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .contact-body {
+    flex-direction: column;
+  }
+  .dots {
+      top: -20px;
+      right: -20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+  .contact-left, .contact-form {
+      padding: 1.5rem;
+  }
+}
+
+
+/* Footer */
+.site-footer {
+  background: var(--bg-deep);
+  color: var(--text);
+  padding: 60px 20px 20px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Brand */
+.footer-brand h2 {
+  font-size: 26px;
+  margin: 0;
+  color: var(--accent);
+}
+.footer-brand p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Nav */
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+.footer-nav a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+.footer-nav a:hover {
+  color: var(--accent);
+}
+
+/* Social */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  font-size: 22px;
+}
+.footer-social a {
+  color: var(--text);
+  transition: color .2s ease;
+}
+.footer-social a:hover {
+  color: var(--accent);
+}
+
+/* Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
 }
