@@ -64,6 +64,10 @@
   opacity: 0;
 }
 
+#readMoreBtnAboutMe{
+  text-decoration: none;
+}
+
 /* ---------- Theme (reuses your earlier colors if present) ---------- */
 :root {
   --bg-deep: #080e2a;
@@ -275,12 +279,10 @@
 
 .internship-duration {
   color: var(--muted);
-  font-size: clamp(14px,2vw,16px);
   margin: 4px 0 0;
 }
 
 .internship-organization {
-  font-size: clamp(14px,2vw,16px);
   margin-bottom: var(--gap-sm);
 }
 
@@ -288,7 +290,6 @@
   list-style: disc;
   padding-left: 20px;
   color: var(--muted);
-  font-size: clamp(14px,2vw,16px);
   line-height: 1.6;
 }
 
@@ -312,7 +313,6 @@
 }
 
 .leadership-title {
-  font-size: clamp(28px, 5vw, 48px);
   margin: 0 0 clamp(28px,4vw,48px);
   letter-spacing: .4px;
   text-align: center;
@@ -348,19 +348,16 @@
 }
 
 .leadership-duration {
-  font-size: clamp(14px,2vw,16px);
   color: var(--muted);
   margin: 0 0 6px;
 }
 
 .leadership-organization {
-  font-size: clamp(14px,2vw,16px);
   font-weight: 500;
   margin: 0 0 10px;
 }
 
 .leadership-description {
-  font-size: clamp(14px,2vw,16px);
   color: var(--muted);
   line-height: 1.6;
 }
@@ -422,7 +419,6 @@
 }
 
 .award-event {
-  font-size: clamp(14px,2vw,16px);
   color: var(--muted);
   line-height: 1.6;
 }
@@ -518,7 +514,6 @@
   border-radius: 10px;
   padding: 1rem;
   font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
   color: #333;
 }
 
@@ -539,7 +534,6 @@
   border-radius: 10px;
   background-color: #ffffff;
   color: #101128;
-  font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;

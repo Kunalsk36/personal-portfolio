@@ -6,6 +6,7 @@
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body class="bg-[#060633] text-white font-sans">
     <!-- Header / Navigation -->
@@ -38,14 +39,16 @@
               class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
             ></span>
           </a>
-          <a href="#internship" class="relative group">
-            Internship
+
+          <a href="#education-container-id" class="relative group">
+            Education & Certifications
             <span
               class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
             ></span>
           </a>
-          <a href="#educationAndCertifications" class="relative group">
-            Education & Certifications
+
+          <a href="#internship" class="relative group">
+            Internship
             <span
               class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
             ></span>
@@ -107,7 +110,7 @@
 
     <!-- Hero Section -->
     <section
-      class="relative flex flex-col items-center justify-between px-4 py-8 sm:px-10 md:px-20 xl:flex-row gap-y-12 sm:gap-y-24 overflow-hidden"
+      class="relative flex flex-col items-center justify-between px-4 py-8 sm:px-10 md:px-20 xl:flex-row gap-y-12 sm:gap-y-24"
     >
       <!-- Left Content -->
       <div
@@ -157,7 +160,7 @@
 
             <!-- LinkedIn Link -->
             <a
-              href="https://www.linkedin.com/in/kunal-kavathekar-7088b1309"
+              href="https://www.linkedin.com/in/kunal-kavathekar"
               target="_blank"
               class="group relative bg-white w-[50px] h-[50px] border-[3px] border-[#0077B5] rounded-full cursor-pointer overflow-hidden transition-all duration-500 flex items-center justify-center hover:bg-[#0077B5]"
             >
@@ -227,7 +230,7 @@
         <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
           About <span class="text-[#fca76e]">Me</span>
         </h2>
-        <p class="text-lg text-white leading-relaxed mb-8">
+        <p class="text-sm sm:text-lg text-white leading-relaxed mb-8">
           I'm a tech enthusiast skilled in Robotic Process Automation, UI/UX
           design, Android development, and web development. Driven by the
           evolution of technology, I create user-centric solutions that solve
@@ -237,7 +240,7 @@
         <button
           class="px-6 py-3 sm:px-8 sm:py-4 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 text-white font-bold text-sm sm:text-lg hover:from-pink-600 hover:to-orange-500 transition"
         >
-          Read More
+          <a href="aboutme.html" id="readMoreBtnAboutMe">Read More</a> 
         </button>
       </div>
     </section>
@@ -389,7 +392,7 @@
     </section>
 
     <!-- My Projects Section -->
-    <section id="projects" class="text-white py-16 px-6 md:px-12">
+    <section id="projects" class="text-white px-4 py-8 sm:px-10 md:px-20">
       <div class="max-w-7xl mx-auto">
         <!-- Section Heading -->
         <h2 class="text-4xl font-bold text-center mb-12">
@@ -400,7 +403,7 @@
         <div class="grid gap-8 grid-cols-1 lg:grid-cols-2">
           <!-- Website Project Card-->
           <div
-            class="bg-gradient-to-br from-pink-400 to-orange-400 rounded-3xl p-6 flex flex-col items-center text-center shadow-lg hover:scale-105 transition transform"
+            class="bg-gradient-to-br from-pink-400 to-orange-400 rounded-3xl p-6 flex flex-col items-center text-center shadow-lg hover:scale-105 transition transform justify-between"
           >
             <div class="flex flex-col items-center justify-center gap-4 mb-6 sm:flex-row">
               <div class="flex flex-col text-left">
@@ -412,7 +415,7 @@
                 <h3 class="text-2xl font-bold mb-4 text-gray-900">
                   Blog Aura, Website
                 </h3>
-                <p class="text-lg text-gray-800 max-w-md">
+                <p class="text-sm sm:text-lg text-gray-800 max-w-md">
                   It is a multilingual blogging platform that allows users to
                   create, read, and engage with blogs across English, Hindi, and
                   Marathi, offering seamless category browsing, search, likes,
@@ -428,7 +431,8 @@
             </div>
 
             <a
-              href="#"
+              href="https://github.com/tanvi-rm/MLB_Project"
+              target="_blank"
               class="bg-blue-900 hover:bg-blue-800 text-white font-semibold py-3 px-8 rounded-2xl shadow-md transition w-full mt-2"
             >
               View Project
@@ -437,7 +441,7 @@
 
           <!-- Application Project Card -->
           <div
-            class="bg-gradient-to-br from-pink-400 to-orange-400 rounded-3xl p-6 flex flex-col items-center text-center shadow-lg hover:scale-105 transition transform"
+            class="bg-gradient-to-br from-pink-400 to-orange-400 rounded-3xl p-6 flex flex-col items-center text-center shadow-lg hover:scale-105 transition transform justify-between"
           >
             <h3 class="text-2xl font-bold mb-4 text-gray-900">
               KKNOTES BSCCS, Android Application
@@ -450,7 +454,7 @@
                 class="rounded-lg shadow-md w-32 h-auto"
               />
 
-              <p class="text-lg text-gray-800 max-w-md text-left">
+              <p class="text-sm sm:text-lg text-gray-800 max-w-md text-left">
                 It is an Android app built for BSc Computer Science students,
                 enabling free access to subject-wise study resources. Students
                 can browse by year, semester, and subject to view and download
@@ -465,7 +469,8 @@
             </div>
 
             <a
-              href="#"
+              href="https://github.com/Kunalsk36/KKNotes_BSCCS"
+              target="_blank"
               class="bg-blue-900 hover:bg-blue-800 text-white font-semibold py-3 px-8 rounded-2xl shadow-md transition w-full"
             >
               View Project
@@ -474,7 +479,7 @@
 
           <!-- Game Project Card -->
           <div
-            class="bg-gradient-to-br from-pink-400 to-orange-400 rounded-3xl p-6 flex flex-col items-center text-center shadow-lg hover:scale-105 transition transform"
+            class="bg-gradient-to-br from-pink-400 to-orange-400 rounded-3xl p-6 flex flex-col items-center text-center shadow-lg hover:scale-105 transition transform justify-between"
           >
             <div class="flex flex-col items-center justify-center gap-4 mb-6 sm:flex-row">
               <img
@@ -493,14 +498,15 @@
             <h3 class="text-2xl font-bold mb-4 text-gray-900">
               Block Banger, Unity3D Game
             </h3>
-            <p class="text-lg text-gray-800 max-w-md">
+            <p class="text-sm sm:text-lg text-gray-800 max-w-md">
               It is a Unity-based 3D adventure game built with C#, offering an
               engaging platformer experience with dynamic levels, smooth
               controls, and immersive audio-visual elements.
             </p>
 
             <a
-              href="#"
+              href="https://github.com/Kunalsk36/Mario-Game-Project-Unity3d"
+              target="_blank"
               class="bg-blue-900 hover:bg-blue-800 text-white font-semibold py-3 px-8 mt-8 rounded-2xl shadow-md transition w-full"
             >
               View Project
@@ -509,7 +515,7 @@
 
           <!-- Website Project Card-->
           <div
-            class="bg-gradient-to-br from-pink-400 to-orange-400 rounded-3xl p-6 flex flex-col items-center text-center shadow-lg hover:scale-105 transition transform"
+            class="bg-gradient-to-br from-pink-400 to-orange-400 rounded-3xl p-6 flex flex-col items-center text-center shadow-lg hover:scale-105 transition transform justify-between"
           >
             <div class="flex flex-col items-center justify-center gap-4 mb-6 sm:flex-row">
               <div class="flex flex-col text-left">
@@ -521,7 +527,7 @@
                 <h3 class="text-2xl font-bold mb-4 text-gray-900">
                   KKMusic, Website
                 </h3>
-                <p class="text-lg text-gray-800 max-w-md">
+                <p class="text-sm sm:text-lg text-gray-800 max-w-md">
                   KKMusic is a web-based music streaming platform built with
                   HTML, CSS, and JavaScript, letting users listen to the top 10
                   English songs with controls for play, pause, skip, and seek.
@@ -536,7 +542,8 @@
             </div>
 
             <a
-              href="#"
+              href="https://github.com/Kunalsk36/kkmusic"
+              target="_blank"
               class="bg-blue-900 hover:bg-blue-800 text-white font-semibold py-3 px-8 rounded-2xl shadow-md transition w-full"
             >
               View Project
@@ -595,7 +602,7 @@
       </div>
     </section>
 
-    <section class="internship-section">
+    <section id="internship" class="internship-section">
       <div class="container internship-inner">
         <h2 class="text-4xl font-bold text-center mb-8">
           My <span class="text-[#fca76e]">Internship</span>
@@ -609,11 +616,11 @@
             />
             <div>
               <h3 class="internship-role">RPA Developer Intern</h3>
-              <p class="internship-duration">April 2024 - June 2024</p>
+              <p class="internship-duration text-sm sm:text-lg">April 2024 - June 2024</p>
             </div>
           </div>
 
-          <div class="internship-body">
+          <div class="internship-body text-sm sm:text-lg">
             <p class="internship-company">
               <strong>Company:</strong> Satchitanand Stencils Private Limited
               (in collaboration with Gogate Jogalekar College)
@@ -644,12 +651,9 @@
       </div>
     </section>
 
-    <section class="leadership-section">
+    <section id="leadership" class="leadership-section">
       <div class="container leadership-inner">
-        <!-- <h2 class="leadership-title">
-      <span class="leadership-title-my">My</span>
-      <span class="leadership-title-rest">Leadership & Activities</span>
-    </h2> -->
+        
         <h2 class="text-4xl font-bold text-center mb-8">
           My <span class="text-[#fca76e]">Leadership & Activities</span>
         </h2>
@@ -658,12 +662,12 @@
           <!-- Leadership Card 1 -->
           <div class="leadership-item">
             <h3 class="leadership-role">General Secretary, Student Council</h3>
-            <p class="leadership-duration">2023 - 2024</p>
-            <p class="leadership-organization">
+            <p class="leadership-duration text-sm sm:text-lg">2023 - 2024</p>
+            <p class="leadership-organization text-sm sm:text-lg">
               Gogate Jogalekar College (Autonomous), Ratnagiri
             </p>
 
-            <div class="leadership-description">
+            <div class="leadership-description text-sm sm:text-lg">
               <p>
                 Elected head of the student body, serving as the primary liaison
                 between students and college administration. Directed major
@@ -693,9 +697,9 @@
           <!-- Leadership Card 2 -->
           <div class="leadership-item">
             <h3 class="leadership-role">Cyber Warrior</h3>
-            <p class="leadership-duration">October 2022 - January 2023</p>
-            <p class="leadership-organization">Quick Heal Foundation, Pune</p>
-            <div class="leadership-description">
+            <p class="leadership-duration text-sm sm:text-lg">October 2022 - January 2023</p>
+            <p class="leadership-organization text-sm sm:text-lg">Quick Heal Foundation, Pune</p>
+            <div class="leadership-description text-sm sm:text-lg">
               <p>
                 Selected for the "Cyber Shiksha for Cyber Suraksha" CSR
                 initiative to promote cybersecurity awareness across
@@ -721,12 +725,9 @@
       </div>
     </section>
 
-    <section class="awards-section">
+    <section id="awardsAndAchievements" class="awards-section">
   <div class="container awards-inner">
-    <!-- <h2 class="awards-title">
-      <span class="awards-title-my">My</span>
-      <span class="awards-title-rest">Awards & Achievements</span>
-    </h2> -->
+
     <h2 class="text-4xl font-bold text-center mb-8">
           My <span class="text-[#fca76e]">Awards & Achievements</span>
         </h2>
@@ -735,7 +736,7 @@
       <!-- Award Card 1 -->
       <div class="award-item">
         <h3 class="award-rank">🥇 1st Rank</h3>
-        <p class="award-event">
+        <p class="award-event text-sm sm:text-lg">
           Web Phoenix In-House Software Competition "Phoenix 2022"
         </p>
       </div>
@@ -743,7 +744,7 @@
       <!-- Award Card 2 -->
       <div class="award-item">
         <h3 class="award-rank">🥈 2nd Rank</h3>
-        <p class="award-event">
+        <p class="award-event text-sm sm:text-lg">
           App Phoenix In-House Software Competition "Phoenix 2023-24"
         </p>
       </div>
@@ -751,7 +752,7 @@
       <!-- Achievement Card 3 -->
       <div class="award-item">
         <h3 class="award-rank">🏅 Gold Medalist</h3>
-        <p class="award-event">
+        <p class="award-event text-sm sm:text-lg">
           1st Rank Holder (2024) – B.Sc. Computer Science<br>
           Academic Excellence (CGPI: 9.85), Gogate Jogalekar College, Ratnagiri
         </p>
@@ -760,17 +761,17 @@
   </div>
 </section>
 
-<section class="contact-container mt-8 mb-8">
+<section id="contact" class="contact-container mt-8 mb-8">
     <div class="contact-header">
         <h2 class="text-4xl font-bold text-center mb-3">
           Contact <span class="text-[#fca76e]">With Me</span>
         </h2>
-        <p class="text-lg text-gray-300 text-center leading-relaxed max-w-2xl mx-auto mb-8">
+        <p class="text-sm sm:text-lg text-gray-300 text-center leading-relaxed max-w-2xl mx-auto mb-8">
           Feel free to reach out! I'm excited to connect and hear from you.
         </p>
     </div>
 
-    <div class="contact-body">
+    <div class="contact-body text-sm sm:text-lg">
 
         <div class="contact-left">
             <p class="contact-email">
@@ -816,19 +817,19 @@
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
+      <a href="#education-container-id">Education</a>
       <a href="#internship">Internship</a>
       <a href="#leadership">Leadership</a>
-      <a href="#awards">Awards</a>
-      <a href="#contact-container-id">Contact</a>
+      <a href="#awardsAndAchievements">Awards</a>
+      <a href="#contact">Contact</a>
     </nav>
 
     <!-- Social Icons -->
     <div class="footer-social">
-      <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+      <a href="https://github.com/KunalSK36" target="_blank" aria-label="GitHub">
         <i class="fab fa-github"></i>
       </a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+      <a href="https://linkedin.com/in/kunal-kavathekar" target="_blank" aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
       <a href="mailto:kunalkavathekar@gmail.com" aria-label="Email">
@@ -847,4 +848,5 @@
   </body>
   <script src="js/resumeDownload.js"></script>
   <script src="js/certificate.js"></script>
+  <script src="js/contactForm.js"></script>
 </html>

@@ -42,7 +42,6 @@ const education = [
   }
 ];
 
-/* Update these paths to your real images */
 const certificates = [
   "./certificates/uiux-certificate.png",
   "./certificates/web-pheonix-certificate.png",
@@ -65,7 +64,7 @@ const certificates = [
     li.className = "edu-item";
     li.innerHTML = `
       <img class="edu-icon" src="${item.icon}" alt="" loading="lazy" />
-      <div class="edu-body">
+      <div class="edu-body text-sm sm:text-lg">
         <h3 class="edu-heading">
           <strong>${item.title}</strong>, <span style="font-weight:600">${item.right}</span>
         </h3>

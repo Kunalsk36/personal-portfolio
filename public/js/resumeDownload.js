@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (downloadCvBtn) {
           downloadCvBtn.addEventListener("click", function (e) {
-            var fileId = "1FbHO8O_yX_JJ9xzYCmch0qHhCtvK64af";
+            var fileId = "1H6ertVxG8dX11VpsEBu4s77U_lqg2AXY";
             var downloadUrl =
               "https://drive.google.com/uc?export=download&id=" + fileId;
             var a = document.createElement("a");

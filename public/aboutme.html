@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Kunal Kavathekar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#060633] text-white font-sans">
+
+  <!-- Header / Navigation -->
+    <header class="w-full bg-[#060633] text-white">
+      <div
+        class="flex items-center justify-between max-w-7xl mx-auto px-6 py-5"
+      >
+        <!-- Logo -->
+        <a href="#home">
+          <img src="assets/logo@2x.png" alt="Logo" id="logo" />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex space-x-8 text-base font-semibold">
+          <a href="index.html#home" class="relative group">
+            Home
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+          
+            <a href="index.html#about" class="relative group">
+            About Me
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+          <a href="index.html#skills" class="relative group">
+            Skills
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+          <a href="index.html#projects" class="relative group">
+            Projects
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+
+          <a href="index.html#education-container-id" class="relative group">
+            Education
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+
+          <a href="index.html#internship" class="relative group">
+            Internship
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+
+          <a href="index.html#awardsAndAchievements" class="relative group">
+            Awards
+            <span
+              class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"
+            ></span>
+          </a>
+        </nav>
+
+        <!-- Contact Button -->
+        <a
+          href="index.html#contact"
+          class="hidden lg:inline-block bg-white text-black font-bold px-6 py-3 rounded-xl shadow-md hover:bg-gray-200 transition"
+        >
+          Contact Me
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menu-btn"
+          class="lg:hidden flex flex-col space-y-1 focus:outline-none"
+        >
+          <span class="block w-6 h-0.5 bg-white"></span>
+          <span class="block w-6 h-0.5 bg-white"></span>
+          <span class="block w-6 h-0.5 bg-white"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav
+        id="mobile-menu"
+        class="hidden lg:hidden flex flex-col space-y-4 px-6 pb-4 bg-[#060633] text-base font-semibold"
+      >
+        <a href="index.html#home" class="hover:text-blue-400">Home</a>
+        <a href="index.html#about" class="hover:text-blue-400">About Me</a>
+        <a href="index.html#skills" class="hover:text-blue-400">Skills</a>
+        <a href="index.html#projects" class="hover:text-blue-400">Projects</a>
+        <a href="index.html#internship" class="hover:text-blue-400">Internship</a>
+        <a href="index.html#education-container-id" class="hover:text-blue-400"
+          >Education & Certifications</a
+        >
+
+        <a href="index.html#awardsAndAchievements" class="hover:text-blue-400"
+          >Awards & Achievements</a
+        >
+        <a
+          href="index.html#contact"
+          class="bg-white text-black font-bold px-6 py-3 rounded-xl shadow-md hover:bg-gray-200 transition text-center"
+        >
+          Contact Me
+        </a>
+      </nav>
+
+      <script src="js/menu.js"></script>
+    </header>
+
+  <!-- Extended About Section -->
+  <main class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-10 flex flex-col md:flex-row items-center gap-10">
+        
+        <!-- Image -->
+        <div class="flex-shrink-0">
+          <img src="assets/kkpik3.png" alt="About Me Image"
+               class="w-64 h-64 rounded-2xl object-cover shadow-lg border-4 border-white/20">
+        </div>
+
+        <!-- Text -->
+        <div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">About <span class="text-orange-400">Me</span></h1>
+          <h2 class="text-2xl font-semibold text-pink-400">Hello! I'm Kunal Shrikant Kavathekar</h2>
+          <p class="mt-4 text-gray-200 leading-relaxed">
+            I am a passionate and results-driven professional with expertise in 
+            Robotic Process Automation, UI/UX design, Android development, 
+            and web development. My journey in technology began in college with a simple HTML and CSS website, 
+            sparking my passion for continuous exploration and innovation.
+          </p>
+          <p class="mt-4 text-gray-200 leading-relaxed">
+            Motivated by technology's evolution, I thrive on solving complex problems and creating innovative solutions. 
+            My skills enable me to develop efficient workflows, user-friendly interfaces, versatile mobile apps, and dynamic websites. 
+            A highlight of my career is developing KKNOTES BSCCS an Android app that provides students with easy access to study materials. The positive feedback and impact reinforced my commitment to user-centric design.
+          </p>
+          <p class="mt-4 text-gray-200 leading-relaxed">
+            I believe in a user-centric approach, continuous learning, and adaptability to stay ahead in the ever-evolving tech landscape. 
+            My work philosophy revolves around understanding user needs and delivering solutions that not only meet but exceed expectations.
+          </p>
+          <p class="mt-4 text-gray-200 leading-relaxed">
+            For more information or to discuss potential collaborations, please feel free to contact me. I look forward to connecting with you!
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#060633] text-gray-300 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 items-center text-center md:text-left">
+      
+      <!-- Brand -->
+      <div>
+        <h2 class="text-2xl font-bold text-white">Kunal Kavathekar</h2>
+        <p class="mt-2 text-gray-400">Turning ideas into interactive experiences</p>
+      </div>
+
+      <!-- Quick Links -->
+      <nav class="flex flex-wrap justify-center md:justify-start gap-6 text-sm font-medium">
+        <a href="index.html#home" class="hover:text-orange-400">Home</a>
+        <a href="index.html#about" class="hover:text-orange-400">About</a>
+        <a href="index.html#skills" class="hover:text-orange-400">Skills</a>
+        <a href="index.html#projects" class="hover:text-orange-400">Projects</a>
+        <a href="index.html#education-container-id" class="hover:text-orange-400">Education</a>
+        <a href="index.html#internship" class="hover:text-orange-400">Internship</a>
+        <a href="index.html#awardsAndAchievements" class="hover:text-orange-400">Awards</a>
+        <a href="index.html#contact" class="hover:text-orange-400">Contact</a>
+      </nav>
+
+      <!-- Social Icons -->
+      <div class="flex justify-center md:justify-end gap-6">
+        <a href="https://github.com/KunalSK36" target="_blank" aria-label="GitHub"
+           class="text-gray-400 hover:text-white text-xl"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/kunal-kavathekar" target="_blank" aria-label="LinkedIn"
+           class="text-gray-400 hover:text-[#0077B5] text-xl"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:kunalkavathekar@gmail.com" aria-label="Email"
+           class="text-gray-400 hover:text-pink-400 text-xl"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+      © 2025 Kunal Kavathekar. All Rights Reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
